@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+/* 
+Paleta de colores
+naranjo: #FD7F02
+negro: #000000
+blanco: #FAFAFA
+marron: #673036
+*/
+
+
+/* nav */
+
+header{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #FD7F02;
+    z-index: 100;
+}
+
+.navegador{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    background-color: #FD7F02;
+    display: grid;
+    flex-direction: row;
+}
+
+img.logotipo {
+    width: 90px;
+    padding: 5px 0px 0px 10px;
+    grid-area: logo;
+}
+
+nav{
+    display: none;
+    /* editable desde los media querie */
+}
+
+.navBoton{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    /* margin: 1px black solid; */
+}
+
+.navBoton a{
+    color: white;
+}
+
+.buscador{
+    grid-area: buscador;
+    display: table;
+    padding: 1.5%;
+}
+
+.buscador input.buscadorText{
+    display: table-cell;
+    width: 95%;
+    height: 3rem;
+    border: 3px solid black;
+    font-size: 1.5rem;
+}
+
+.navegador{
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-areas: 
+    "logo buscador";
+}
+
+/* header end*/
+
+/* cuerpos */
+
+h1{
+    color: white;
+    background-color: #673036;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-bottom: 5px black solid;
+    border-top:5px black solid;
+    text-shadow: black 3px 3px;
+    grid-area: titulo;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1% 0 0.5% 0;
+    margin: 20px;
+}
+
+
+h3{
+    text-transform: uppercase;
+    padding: 1% 0 0.5% 0;;
+}
+
+p{
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+main {
+    background-color: white;
+    text-align: center;
+    grid-area: main;
+    margin-top: 70px;
+}
+
+.destacado{
+    padding: 2%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.destacado.shaman{
+    grid-area: shaman;
+
+}
+
+.destacado.vinland{
+    grid-area: vinland;
+}
+
+.destacado img{
+    height: auto;
+    max-width: 100%;
+}
+
+.destacado.shaman img{
+    min-width: 550px;
+    max-height: 100%;
+}
+
+.ubicacion {
+    background-color: #FD7F02;
+    padding: 1%;
+    border-top: black 5px solid;
+    border-bottom: black 5px solid;
+    margin-top: 10%;
+    grid-area: linkubi;
+}
+.ubicacion a{
+    color: white;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1%;
+    grid-area: footer;
+}
+
+.wsp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.garantia{
+    padding: 2%;
+    background-color: #673036;
+    color: #FFFF;
+    grid-area: garantia;
+}
+/* catalogo */
+.productos{
+    display: grid;
+}
+
+.catalogo{
+    grid-area: catalogo;
+}
+
+/* contacto */
+.contacto{
+    display: grid;
+}
+
+.datos{
+    grid-area: contacto;
+}
+
+form{
+    justify-content: center;
+}
+
+.formularioInterno{
+    width: 80%;
+    border: 5px black solid;
+    margin: auto;
+    text-align: left;
+    padding: 5%;
+}
+.formularioInterno label{
+    display: block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.formularioInterno input{
+    width: 100%;
+    height: 2.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* pagina de ubicacion */
+.mapa{
+    display: grid;
+}
+
+.cuerpomap{
+    grid-area: ubi;
+    display: block;
+    margin: 20px;
+}
+.important{
+    align-content: center;
+    margin: auto;
+}
+
+iframe{
+    grid-area: maps;
+    display: block;
+    justify-items: center;
+    margin: auto;
+}
+
+.important{
+    text-align: center;
+    width: 80%;
+
+}
+
+.articulos{
+    align-content: center;
+    margin: 0 5% 0 5%;
+}
+
+article{
+    justify-content: center;
+    padding-left: 30px ;
+    margin: 60px 50px 30px 20px;
+}
+
+.cafecito{
+    background-color: #673036;
+    grid-area: cafe;
+    padding: 5%;
+    margin-top: 3%;
+    border-top:5px black solid ;
+    border-bottom: 5px black solid;
+}
+
+
+
+/* fin de cuerpos */
+
+/* productos */
+.productDisplay{
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    width: 80%;
+    flex-wrap:wrap ;
+}
+
+.elemento{
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+}
+.producto{
+    background-color: #673036;
+    color: #FFFF;
+    width: 200px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.elemento legend {
+    text-align: center;
+    color: #000000;
+    display: block;
+    padding-top: 7px;;
+    font-weight: bold;
+  }
+
+  /* articulos */
+  .comprar{
+    grid-area: comprar;
+  }
+  .one{
+    grid-area: one;
+  }
+
+  .two{
+    grid-area: two;
+  }
+
+  .three{
+    grid-area: three;
+  }
+
+  .four{
+    grid-area: four;
+  }
+
+  /* imagenes de producto */
+.uno{
+    background-image: url(../img/productouno.jpg);
+    background-size: cover;
+}
+
+.dos{
+    background-image: url(../img/productodos.jpg);
+    background-size: cover
+}
+
+.tres{
+    background-image: url(../img/productotres.jpg);
+    background-size: cover;;
+}
+
+.cuatro{
+    background-image: url(../img/productocuatro.jpg);
+    background-size: cover;
+}
+
+.cinco{
+    background-image: url(../img/productocinco.jpg);
+    background-size: cover;
+}
+
+.seis{
+    background-image: url(../img/productoseis.jpg);
+    background-size: cover;
+}
+
+/* grid */
+.index {
+    display: grid;
+    grid-template-areas:
+    "titulo titulo"
+    "shaman shaman"
+    "vinland vinland"
+    "main main"
+    "linkubi linkubi"
+    "garantia garantia"
+    "footer footer" 
+    ;
+}
+
+.contacto{
+    grid-template-areas:
+    "botones botones"
+    "titulo titulo"
+    "contacto contacto"
+    "cafe cafe"
+    "footer footer" ;
+}
+
+.productos{
+    grid-template-areas:
+    "botones botones"
+    "titulo titulo"
+    "catalogo catalogo"
+    "cafe cafe"
+    "footer footer" ;
+}
+
+.mapa{
+    grid-template-areas:
+    "botones botones"
+    "titulo titulo"
+    "ubi ubi"
+    "maps maps"
+    "cafe cafe"
+    "footer footer" ;
+}
+
+.frecuentes{
+    display: grid;
+    grid-template-areas:
+    "botones botones"
+    "titulo titulo"
+    "comprar comprar"
+    "one one"
+    "two two"
+    "three thee"
+    "four four"
+    "cafe cafe"
+    "footer footer";
+}
+
+
+/* media queries */
+/* mobile */
+
+@media screen and (min-width: 630px){
+    
+    nav{
+        position: sticky;
+        display: grid;
+        text-align: center;
+        text-transform: uppercase ;
+        font-size: 1.5rem;
+        visibility: visible;
+        background-color: #FD7F02;
+        padding-top: 15px ;
+        padding-bottom: 15px;
+        border-bottom: 3px black solid;
+    }
+
+    .nav{
+        grid-area: botones;
+        position: sticky;
+        left: 0;
+        top: 88px;
+    }
+    
+    ul{
+        overflow: hidden;
+    }
+    
+    li{
+        display: inline;
+        vertical-align: middle;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    legend{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .index{
+        grid-template-areas:
+        "botones botones"
+        "titulo titulo"
+        "shaman shaman"
+        "vinland vinland"
+        "main main"
+        "linkubi linkubi"
+        "garantia garantia"
+        "footer footer";
+    }
+}
+
+
+
+/* table / ipad */
+@media screen and (min-width: 768px){
+    nav{
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+
+    .index{
+        grid-template-areas:
+        "botones botones"
+        "titulo titulo"
+        "shaman shaman"
+        "vinland vinland"
+        "main main"
+        "linkubi linkubi"
+        "garantia garantia"
+        "footer footer";
+    }
+}
+/* desktop */
+@media screen and (min-width: 1024px){
+    /* index */
+    .index{
+        grid-template-columns: 200px auto auto;
+        grid-template-areas:
+        "botones titulo titulo"
+        "botones shaman vinland"
+        "botones main main"
+        "botones linkubi linkubi"
+        "botones garantia garantia"
+        "botones footer footer";
+    }
+
+    nav{
+        border: none;
+        position: sticky;
+        align-self: start;
+        top: 150px;
+    }
+
+    .nav{
+
+        bottom: auto;
+        left: 0;
+        background-color: #FD7F02;
+        height: 100%;
+        border-right: 5px solid black;
+    }
+    
+    ul{
+        height: auto;
+        align-content:stretch;
+    }
+    li{
+        display: block;
+        margin: 10px;
+    }
+    h1{
+        border-top: none;
+    }
+    header{
+        border-bottom: 5px solid black;
+        z-index: 100;
+    }
+/* pagina de contacto */
+    .contacto{
+        grid-template-columns: 200px auto;
+        grid-template-areas:
+        "botones titulo"
+        "botones contacto"
+        "botones cafe"
+        "botones footer" ;
+    }
+
+/* pagina de catalogo */
+    .productos{
+        grid-template-columns: 200px auto;
+        grid-template-areas:
+        "botones titulo"
+        "botones catalogo"
+        "botones cafe"
+        "botones footer" ;
+    }
+
+/* pagina de ubicacion  */
+    .mapa{
+        grid-template-columns: 200px auto;
+        grid-template-areas:
+        "botones titulo titulo"
+        "botones maps ubi"
+        "botones cafe cafe"
+        "botones footer footer" ;
+}
+
+/* pagina de faq */
+    .frecuentes{
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-areas:
+    "botones titulo titulo"
+    "botones comprar comprar"
+    "botones one two"
+    "botones three three"
+    "botones four four"
+    "botones cafe cafe"
+    "botones footer footer";
+}
+}
