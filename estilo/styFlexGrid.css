@@ -484,7 +484,7 @@ article{
 /* table / ipad */
 @media screen and (min-width: 768px){
     nav{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     h1{
         font-size: 4rem;
