@@ -33,24 +33,54 @@ header{
     background-color: #FD7F02;
     display: grid;
     flex-direction: row;
+    z-index: 100;
+    flex-shrink: 0;
 }
 
 img.logotipo {
     width: 90px;
-    padding: 5px 0px 0px 10px;
+    padding: 15px 0px 0px 25px;
     grid-area: logo;
+    transition: all .2s ease-in-out;
+    z-index: 102;
 }
 
-nav{
-    display: none;
-    /* editable desde los media querie */
+img.logotipo:hover{
+    transform: scale(0.95);
+    z-index: 102;
 }
+
+.nav{
+    min-width: 250px;
+    grid-area: botones;
+    left: 0;
+    top: 88px;
+    z-index: 99;
+}
+
 
 .navBoton{
     background-color: black;
     color: white;
     padding: 1rem;
-    /* margin: 1px black solid; */
+    transition: all .2s ease-in-out;
+}
+
+.navBoton.instagram{
+    background: radial-gradient(circle at 120% 107%, #fdf497 0%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+}
+.navBoton.facebook{
+    background-color: blue;
+}
+.navBoton.whatsapp{
+    background-color: #075E54;
+}
+
+.navBoton:hover{
+    background-color: #673036;
+    box-shadow: 0 6px 9px 0 rgba(0,0,0,0.24), 0 10px 20px 0 rgba(0,0,0,0.19);
+    transform: scale(1.05)
+
 }
 
 .navBoton a{
@@ -95,12 +125,26 @@ h1{
 }
 
 h2{
-    text-align: center;
     text-transform: uppercase;
-    padding: 1% 0 0.5% 0;
-    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
+.ubicacion {
+    text-align: center;
+}
+
+.ubicacion a{
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+}
+
+.ubicacion a:hover{
+    transform: scale(1.2);
+}
 
 h3{
     text-transform: uppercase;
@@ -120,9 +164,14 @@ main {
 }
 
 .destacado{
-    padding: 2%;
     text-transform: uppercase;
     text-align: center;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+}
+
+.destacado:hover{
+    transform: scale(0.95);
 }
 
 .destacado.shaman{
@@ -146,7 +195,7 @@ main {
 
 .ubicacion {
     background-color: #FD7F02;
-    padding: 1%;
+    padding: 1% 0 1% 0;
     border-top: black 5px solid;
     border-bottom: black 5px solid;
     margin-top: 10%;
@@ -164,11 +213,19 @@ footer{
 }
 
 .wsp{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position:fixed;
+    bottom: 30px;
+    right: 30px;
     width: 100px;
     height: 100px;
+}
+
+.wsp img{
+    transition: all .2s ease-in-out;
+}
+
+.wsp img:hover{
+    transform: scale(1.25);
 }
 
 .garantia{
@@ -289,6 +346,8 @@ article{
     display: flex;
     flex-flow: column;
     width: 200px;
+    transition: all .2s ease-in-out;
+    margin-bottom: 30px;
 }
 .producto{
     background-color: #673036;
@@ -296,6 +355,12 @@ article{
     width: 200px;
     height: 300px;
     border: 2px solid black;
+    transition: all .2s ease-in-out
+}
+
+.elemento:hover{
+    transform: scale(1.10);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .elemento legend {
@@ -361,6 +426,7 @@ article{
 .index {
     display: grid;
     grid-template-areas:
+    "botones botones"
     "titulo titulo"
     "shaman shaman"
     "vinland vinland"
@@ -416,6 +482,20 @@ article{
 
 /* media queries */
 /* mobile */
+@media screen and (max-width: 630px){
+    .index{
+        grid-template-areas:
+        "botones botones"
+        "titulo titulo"
+        "shaman shaman"
+        "vinland vinland"
+        "main main"
+        "linkubi linkubi"
+        "garantia garantia"
+        "footer footer" 
+        ;
+    }
+}
 
 @media screen and (min-width: 630px){
     
@@ -430,21 +510,30 @@ article{
         padding-top: 15px ;
         padding-bottom: 15px;
         border-bottom: 3px black solid;
+        z-index: 99;
+
     }
 
     .nav{
+        min-width: 250px;
         grid-area: botones;
         position: sticky;
         left: 0;
         top: 88px;
+        z-index: 99;
     }
     
     ul{
+        align-items: center;
+        margin: auto ;
         overflow: hidden;
+        display:inline-flex;
+        align-items: center;
     }
     
     li{
-        display: inline;
+        display:inline-flex;
+        margin: 5px;
         vertical-align: middle;
     }
 
@@ -454,6 +543,8 @@ article{
     h2{
         font-size: 2.5rem;
     }
+
+    
     h3{
         font-size: 2rem;
         margin-bottom: 1rem;
@@ -509,7 +600,7 @@ article{
 @media screen and (min-width: 1024px){
     /* index */
     .index{
-        grid-template-columns: 200px auto auto;
+        /* grid-template-columns: 200px auto auto; */
         grid-template-areas:
         "botones titulo titulo"
         "botones shaman vinland"
@@ -524,10 +615,11 @@ article{
         position: sticky;
         align-self: start;
         top: 150px;
+        z-index: 100;
+
     }
 
     .nav{
-
         bottom: auto;
         left: 0;
         background-color: #FD7F02;
@@ -535,13 +627,22 @@ article{
         border-right: 5px solid black;
     }
     
+    li.navBoton.instagram{
+        font-size: 1.6rem;
+    }
+
     ul{
+        align-items: center;
+        margin: unset;
+        padding: auto;
         height: auto;
         align-content:stretch;
+        display: inline-block;
     }
     li{
         display: block;
-        margin: 10px;
+        margin: 20px;
+        overflow:hidden;
     }
     h1{
         border-top: none;
@@ -593,3 +694,5 @@ article{
     "botones footer footer";
 }
 }
+
+
