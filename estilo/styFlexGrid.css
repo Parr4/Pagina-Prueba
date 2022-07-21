@@ -653,7 +653,7 @@ article{
     }
 /* pagina de contacto */
     .contacto{
-        grid-template-columns: 200px auto;
+        grid-template-columns: 337px auto;
         grid-template-areas:
         "botones titulo"
         "botones contacto"
@@ -663,7 +663,6 @@ article{
 
 /* pagina de catalogo */
     .productos{
-        grid-template-columns: 200px auto;
         grid-template-areas:
         "botones titulo"
         "botones catalogo"
@@ -673,7 +672,6 @@ article{
 
 /* pagina de ubicacion  */
     .mapa{
-        grid-template-columns: 200px auto;
         grid-template-areas:
         "botones titulo titulo"
         "botones maps ubi"
@@ -683,7 +681,6 @@ article{
 
 /* pagina de faq */
     .frecuentes{
-    grid-template-columns: 200px 1fr 1fr;
     grid-template-areas:
     "botones titulo titulo"
     "botones comprar comprar"
